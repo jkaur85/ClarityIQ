@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Onboarding from './pages/Onboarding';
 import Customers from './pages/Customers';
 import CustomerAssetsTracker from './pages/CustomerAssetsTracker';
+import ArchivedAssets from './pages/ArchivedAssets';
 import Reports from './pages/Reports';
 import Settings from './pages/Settings';
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="/onboarding"  element={<Onboarding />} />
               <Route path="/customers"   element={<Customers />} />
               <Route path="/customer-assets" element={<CustomerAssetsTracker />} />
+              <Route path="/archived-assets" element={<ArchivedAssets />} />
               <Route path="/reports"     element={<Reports />} />
               <Route path="/settings"    element={<Settings />} />
             </Routes>

@@ -1168,6 +1168,183 @@
   color: var(--text-muted);
 }
 
+/* ─── Archived Assets ─────────────────────────────────────── */
+.archived-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.archived-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.archived-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.9fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.archived-main-card,
+.archived-timeline-card,
+.archived-stats-card {
+  padding: 24px;
+}
+
+.archived-filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.archived-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.archived-filter-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  min-width: 64px;
+}
+
+/* Status badges specific to archived */
+.archived-status-disposed  { background: rgba(239,68,68,0.12); color: #F87171; }
+.archived-status-pending   { background: var(--amber-subtle);  color: var(--amber); }
+.archived-status-recovered { background: var(--green-subtle);  color: var(--green); }
+
+.archived-mini-icon {
+  opacity: 0.6;
+}
+
+.archived-reason {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.archived-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 56px 24px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Side column */
+.archived-side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Timeline */
+.archived-timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.archived-timeline-list {
+  display: grid;
+  gap: 2px;
+}
+
+.archived-tl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition);
+}
+
+.archived-tl-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.archived-tl-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.tl-archived  { background: var(--blue-subtle);   color: var(--blue);  }
+.tl-recovered { background: var(--green-subtle);  color: var(--green); }
+.tl-disposed  { background: rgba(239,68,68,0.12); color: #F87171;      }
+.tl-pending   { background: var(--amber-subtle);  color: var(--amber); }
+
+.archived-tl-body { flex: 1; min-width: 0; }
+
+.archived-tl-event {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.archived-tl-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Disposal Breakdown bar chart */
+.archived-bar-list {
+  display: grid;
+  gap: 14px;
+}
+
+.archived-bar-row { display: flex; flex-direction: column; gap: 6px; }
+
+.archived-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.archived-bar-meta span:last-child {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.archived-bar-track {
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.archived-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.bar-blue  { background: var(--blue); }
+.bar-red   { background: #F87171; }
+.bar-amber { background: var(--amber); }
+.bar-green { background: var(--green); }
+
 /* ─── Responsive ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   .app-main  { margin-left: 0; }
@@ -1175,7 +1352,9 @@
   .form-grid { grid-template-columns: 1fr; }
   .review-grid { grid-template-columns: 1fr; }
   .assets-layout { grid-template-columns: 1fr; }
+  .archived-layout { grid-template-columns: 1fr; }
   .assets-toolbar { flex-direction: column; }
   .assets-toolbar-actions { width: 100%; justify-content: flex-start; }
   .assets-search { min-width: 100%; }
+  .archived-filter-group { flex-direction: column; align-items: flex-start; }
 }

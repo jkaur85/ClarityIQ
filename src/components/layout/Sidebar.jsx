@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import {
+  Archive,
   Boxes,
   LayoutDashboard,
   Users,
@@ -14,6 +15,7 @@ const NAV_ITEMS = [
   { label: 'Dashboard',   icon: LayoutDashboard, to: '/' },
   { label: 'Customers',   icon: Users,           to: '/customers', badge: '128' },
   { label: 'Customer Assets', icon: Boxes,       to: '/customer-assets', badge: '84' },
+  { label: 'Archived Assets', icon: Archive,     to: '/archived-assets', badge: '42' },
   { label: 'Onboarding',  icon: UserPlus,        to: '/onboarding', badge: '3' },
   { label: 'Reports',     icon: BarChart3,       to: '/reports' },
   { label: 'Settings',    icon: Settings,        to: '/settings' },
